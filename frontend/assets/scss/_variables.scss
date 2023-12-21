@@ -1,0 +1,27 @@
+//Variables
+$superblue: #1d76f9;
+$blue: #5385ed;
+$blueDark: #1662d2;
+$blueLight: #5fa7fe;
+$greyDark: #5c5c5c;
+$white: #fff;
+$colorHover: #eff4ff;
+$black: #222529;
+
+//Mixins
+@mixin buttonActive(
+    $hoverColorText,
+    $hoverColorBg,
+    $activeColorText,
+    $activeColorBg
+) {
+    &:hover {
+        background-color: $hoverColorText;
+        color: $hoverColorBg;
+    }
+
+    &:active {
+        background-color: $activeColorBg;
+        color: $activeColorText;
+    }
+}
