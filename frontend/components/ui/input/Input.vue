@@ -40,6 +40,7 @@ const onInput = (e: Event) => {
     <input
         @input="onInput"
         :type="type"
+        :value="modelValue"
         class="input"
         :placeholder="placeholder"
         :pattern="patterns"
