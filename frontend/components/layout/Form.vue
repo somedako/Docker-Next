@@ -2,7 +2,6 @@
 import { ref } from "vue";
 import { useOrderStore } from "@/store/OrderStore";
 import { v4 as uuid } from "uuid";
-import axios from "axios";
 
 const orderStore = useOrderStore();
 
@@ -23,13 +22,12 @@ const createOrder = async () => {
     price: price.value,
     quantity: quantity.value,
   };
-  try {
-    const res = await axios.post(url, {
+  await useFetch(url, {
+    method: "post",
+    body: {
       order,
-    });
-  } catch (error) {
-    console.log(error);
-  }
+    },
+  });
 };
 
 const closeModal = () => {
