@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue';
+
 import { useOrderStore } from '@/store/OrderStore';
 
 const orderStore = useOrderStore();
 
-onMounted(() => {
-    orderStore.getOrders();
-});
+await useAsyncData("orders", () => orderStore.getOrders());
 </script>
 
 <template>
