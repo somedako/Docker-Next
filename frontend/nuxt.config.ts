@@ -16,10 +16,10 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  server: {
-    watch: {
-      usePolling: true,
+     server: {
+       watch: {
+         usePolling: true,
     },
   },
+  }, 
 });
