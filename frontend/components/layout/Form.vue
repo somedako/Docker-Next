@@ -92,6 +92,7 @@ const closeModal = () => {
   padding: 15px;
   background: #fff;
   z-index: 2;
+  animation: 0.5s 1 both showModal;
 
   & h2 {
     margin: 15px 0;
@@ -100,5 +101,13 @@ const closeModal = () => {
   & button {
     width: 50%;
   }
+   @keyframes showModal {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }  
 }
 </style>
